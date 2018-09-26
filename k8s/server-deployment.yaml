@@ -35,6 +35,3 @@ spec:
                 secretKeyRef:
                   name: pgpassword
                   key:  PGPASSWORD 
-
-#Remeber to run this command in production.
-#kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asfrdserf
