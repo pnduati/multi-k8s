@@ -10,3 +10,9 @@ before_install:
   - gcloud config set project multi-k8s-217605
   - gcloud config set compoute/zone europe-west2-c
   - gcloud container clusters get-credentials multi-cluster
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+  - docker build -t pnduati/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run pnduati/react-test npm test -- --coverage
+  
