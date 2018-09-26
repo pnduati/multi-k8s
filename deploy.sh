@@ -14,5 +14,5 @@ docker push pnduati/multi-worker:$GIT_SHA
 kubectl apply -f k8s
 
 kubectl set image deployments/server-deployment server=pnduati/multi-server:$GIT_SHA
-kubectl set image deployments/client-deployment server=pnduati/multi-client:$GIT_SHA
-kubectl set image deployments/worker-deployment server=pnduati/multi-worker:$GIT_SHA
+kubectl set image deployments/client-deployment client=pnduati/multi-client:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=pnduati/multi-worker:$GIT_SHA
