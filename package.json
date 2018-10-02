@@ -1,0 +1,11 @@
+{
+    "name": "gcp-kubernetes-project",
+    "version": "1.0.0",
+    "author": {
+        "email": "lnduatipeter@gmail.com",
+        "name": "Peter  Nduati"
+    },
+    "scripts": {
+        "release": "release-it"
+    }
+}

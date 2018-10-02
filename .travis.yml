@@ -25,4 +25,6 @@ deploy:
   script: bash ./deploy.sh
   on:
     branch: master
-
+after_success:
+  - npm install --global release-it
+  - release-it --no-npm.publish
