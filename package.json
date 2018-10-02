@@ -1,9 +1,13 @@
 {
     "name": "gcp-kubernetes-project",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": {
         "email": "lnduatipeter@gmail.com",
         "name": "Peter  Nduati"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:pnduati/multi-k8s.git"
     },
     "scripts": {
         "release": "release-it"

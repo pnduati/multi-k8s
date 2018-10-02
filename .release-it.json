@@ -7,11 +7,7 @@
         "release": true,
         "releaseName": "Release %s",
         "preRelease": false,
-        "draft": false,
-        "tokenRef": "GITHUB_TOKEN",
-        "assets": null,
-        "host": null,
-        "timeout": 0,
-        "proxy": false
+        "draft": true,
+        "tokenRef": "GITHUB_TOKEN"
     }
 }

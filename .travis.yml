@@ -20,11 +20,16 @@ before_install:
 script:
   - docker run pnduati/react-test npm test -- --coverage
 
+before_deploy:
+    - git config --local user.name "$GITHUB_USER_NAME"
+    - npm install --global release-it
+    - git config credential.helper "store --file=.git/credentials"
+    - echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
+    - release-it --no-npm.publish 
+
 deploy:
   provider: script
   script: bash ./deploy.sh
   on:
     branch: master
-after_success:
-  - npm install --global release-it
-  - release-it --no-npm.publish
+
